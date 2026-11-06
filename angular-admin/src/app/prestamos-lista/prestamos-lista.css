@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.raw-json-container {
+  min-height: calc(100vh - 68px);
+  background: #000000;
+  color: #38bdf8;
+  padding: 30px;
+  font-family: 'Courier New', Courier, Consolas, Monaco, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+code {
+  color: #a5f3fc;
+}
+
+.error {
+  color: #f87171;
+}

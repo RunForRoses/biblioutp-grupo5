@@ -1,0 +1,13 @@
+@if (cargando) {
+  <div class="raw-json-container">
+    <p>Cargando JSON de préstamos…</p>
+  </div>
+} @else if (error) {
+  <div class="raw-json-container">
+    <p class="error">{{ error }}</p>
+  </div>
+} @else {
+  <div class="raw-json-container">
+    <pre><code>{{ prestamos | json }}</code></pre>
+  </div>
+}

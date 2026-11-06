@@ -1,0 +1,56 @@
+<section class="content">
+  <div class="heading">
+    <div>
+      <p class="eyebrow">CATÁLOGO</p>
+      <h1>Libros</h1>
+      <p class="intro">Consulta los libros registrados en la biblioteca.</p>
+    </div>
+    <div class="heading-actions">
+      <span class="count">{{ libros.length }} libros</span>
+      <a class="button-primary" routerLink="/libros/nuevo">Registrar libro</a>
+    </div>
+  </div>
+
+  @if (cargando) {
+    <p class="message">Cargando catálogo…</p>
+  } @else if (error) {
+    <p class="message error" role="alert">{{ error }}</p>
+  } @else if (libros.length === 0) {
+    <p class="message">Aún no hay libros registrados.</p>
+  } @else {
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Libro</th>
+            <th>Sede</th>
+            <th>Ejemplares</th>
+            <th>Formatos</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (libro of libros; track libro.id) {
+            <tr [appResaltarAgotado]="libro.estado">
+              <td class="book-name">{{ libro.nombre }}</td>
+              <td>{{ libro.sede }}</td>
+              <td>{{ libro.capacidad }}</td>
+              <td>{{ libro.formatos.join(', ') }}</td>
+              <td>
+                <span class="badge" [ngClass]="'badge-' + libro.estado">{{ libro.estado }}</span>
+              </td>
+              <td class="actions">
+                <a class="button-edit" [routerLink]="['/libros', libro.id, 'editar']"> Editar </a>
+
+                <button class="button-delete" type="button" (click)="eliminarLibro(libro)">
+                  Eliminar
+                </button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</section>

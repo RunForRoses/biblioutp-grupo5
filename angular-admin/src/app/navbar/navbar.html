@@ -1,0 +1,21 @@
+<header class="topbar">
+    <div class="brand-area">
+        <a class="brand" routerLink="/libros">
+            <span class="brand-icon">📚</span>
+            <span>BiblioUTP</span>
+        </a>
+        <span class="role-badge">Admin</span>
+    </div>
+
+    <nav class="nav-links">
+        <a routerLink="/libros" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            Catálogo
+        </a>
+        <a routerLink="/libros/nuevo" routerLinkActive="active">
+            + Nuevo Libro
+        </a>
+        <a href="http://localhost:3000/prestamos">
+            Préstamos ↗
+        </a>
+    </nav>
+</header>

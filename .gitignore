@@ -1,0 +1,33 @@
+# Dependencias de Node.js (aplica a la raíz y a todos los submódulos)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Builds y salidas de compilación
+dist/
+build/
+.next/
+out/
+
+# Entornos y secretos
+.env
+.env.local
+.env.*.local
+
+# Archivos generados por Angular
+.angular/
+
+# Caché y temporales de editores
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log

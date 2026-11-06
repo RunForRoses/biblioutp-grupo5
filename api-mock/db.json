@@ -1,0 +1,264 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Carlos Mendoza",
+      "correo": "admin1@utp.edu.pe",
+      "codigo": "A0001",
+      "rol": "admin",
+      "password": "admin123"
+    },
+    {
+      "id": 2,
+      "nombre": "Mariana Flores",
+      "correo": "admin2@utp.edu.pe",
+      "codigo": "A0002",
+      "rol": "admin",
+      "password": "admin123"
+    },
+    {
+      "id": 3,
+      "nombre": "Jose Mina",
+      "correo": "u20231234@utp.edu.pe",
+      "codigo": "U20231234",
+      "rol": "estudiante",
+      "password": "est123"
+    },
+    {
+      "id": 4,
+      "nombre": "Manuel Borjas",
+      "correo": "u20224567@utp.edu.pe",
+      "codigo": "U20224567",
+      "rol": "estudiante",
+      "password": "est123"
+    },
+    {
+      "id": 5,
+      "nombre": "Sebastian Huaches",
+      "correo": "u23307645@utp.edu.pe",
+      "codigo": "U23307645",
+      "rol": "estudiante",
+      "password": "est123"
+    },
+    {
+      "id": 6,
+      "nombre": "Gael Chavez",
+      "correo": "u20241122@utp.edu.pe",
+      "codigo": "U20241122",
+      "rol": "estudiante",
+      "password": "est123"
+    },
+    {
+      "id": 7,
+      "nombre": "Justin Cedillo",
+      "correo": "u20239988@utp.edu.pe",
+      "codigo": "U20239988",
+      "rol": "estudiante",
+      "password": "est123"
+    },
+    {
+      "id": 8,
+      "nombre": "Valentino Zuñiga",
+      "correo": "u20205544@utp.edu.pe",
+      "codigo": "U20205544",
+      "rol": "estudiante",
+      "password": "est123"
+    },
+    {
+      "id": 9,
+      "nombre": "Bryan Mendoza",
+      "correo": "u24259243@utp.edu.pe",
+      "codigo": "U24259243",
+      "rol": "estudiante",
+      "password": "est123"
+    }
+  ],
+  "libros": [
+    {
+      "id": 1,
+      "nombre": "JavaScript: La Guía Definitiva",
+      "sede": "Lima Centro",
+      "capacidad": 15,
+      "formatos": [
+        "Físico",
+        "E-book",
+        "Audiolibro"
+      ],
+      "estado": "disponible"
+    },
+    {
+      "id": 2,
+      "nombre": "Código Limpio: Manual de Estilo Ágil",
+      "sede": "Lima Centro",
+      "capacidad": 20,
+      "formatos": [
+        "Físico",
+        "E-book"
+      ],
+      "estado": "disponible"
+    },
+    {
+      "id": 3,
+      "nombre": "Estructuras de Datos y Algoritmos en JavaScript",
+      "sede": "Lima Sur",
+      "capacidad": 10,
+      "formatos": [
+        "Físico"
+      ],
+      "estado": "disponible"
+    },
+    {
+      "id": 4,
+      "nombre": "Patrones de Diseño de Software",
+      "sede": "Lima Norte",
+      "capacidad": 25,
+      "formatos": [
+        "Físico",
+        "E-book"
+      ],
+      "estado": "disponible"
+    },
+    {
+      "id": 5,
+      "nombre": "Introducción a la Arquitectura de Software",
+      "sede": "San Juan de Lurigancho",
+      "capacidad": 8,
+      "formatos": [
+        "Físico"
+      ],
+      "estado": "agotado"
+    },
+    {
+      "id": 6,
+      "nombre": "Aprende React: De Cero a Producción",
+      "sede": "Lima Centro",
+      "capacidad": 18,
+      "formatos": [
+        "Físico",
+        "E-book"
+      ],
+      "estado": "disponible"
+    },
+    {
+      "id": 7,
+      "nombre": "Desarrollo Web Moderno con Vue.js 3",
+      "sede": "Arequipa",
+      "capacidad": 12,
+      "formatos": [
+        "Físico"
+      ],
+      "estado": "disponible"
+    },
+    {
+      "id": 8,
+      "nombre": "Fundamentos y Diseño de Bases de Datos",
+      "sede": "Lima Sur",
+      "capacidad": 5,
+      "formatos": [
+        "Físico",
+        "E-book"
+      ],
+      "estado": "agotado"
+    },
+    {
+      "nombre": "The Road to React",
+      "sede": "lima este",
+      "capacidad": 1,
+      "formatos": [
+        "Físico"
+      ],
+      "estado": "disponible",
+      "id": 9
+    },
+    {
+      "nombre": "Learning React: Modern Patterns for Developing React Apps",
+      "sede": "lima sur",
+      "capacidad": 3,
+      "formatos": [
+        "Físico"
+      ],
+      "estado": "disponible",
+      "id": 10
+    }
+  ],
+  "prestamos": [
+    {
+      "usuarioId": 8,
+      "nombreUsuario": "Valentino Zuñiga",
+      "libro": "Física Universitaria Vol 1",
+      "fechaDevolucion": "2026-12-04",
+      "estado": "En posesión del alumno",
+      "id": 1
+    },
+    {
+      "usuarioId": 8,
+      "nombreUsuario": "Valentino Zuñiga",
+      "libro": "Cálculo de una Variable",
+      "fechaDevolucion": "2026-11-24",
+      "estado": "En posesión del alumno",
+      "id": 2
+    },
+    {
+      "usuarioId": 8,
+      "codigoUsuario": "U20205544",
+      "nombreUsuario": "Valentino Zuñiga",
+      "libro": "Libro Académico Especializado N° 1",
+      "formato": "E-book",
+      "fechaDevolucion": "2026-11-21",
+      "estado": "En posesión del alumno",
+      "id": 3
+    },
+    {
+      "usuarioId": 9,
+      "codigoUsuario": "U24259243",
+      "nombreUsuario": "Bryan Mendoza",
+      "libroId": "1",
+      "libro": "Libro Académico Especializado N° 1",
+      "formato": "Audiolibro",
+      "fecha": "2026-12-05",
+      "horaInicio": "11:40",
+      "horaFin": "19:40",
+      "estado": "En posesión del alumno",
+      "id": 4
+    },
+    {
+      "usuarioId": 7,
+      "codigoUsuario": "U20239988",
+      "nombreUsuario": "Justin Cedillo",
+      "libroId": "6",
+      "libro": "Libro Académico Especializado N° 6",
+      "formato": "E-book",
+      "fecha": "2026-11-25",
+      "horaInicio": "18:56",
+      "horaFin": "19:56",
+      "estado": "En posesión del alumno",
+      "id": 5
+    },
+    {
+      "usuarioId": 9,
+      "codigoUsuario": "U24259243",
+      "nombreUsuario": "Bryan Mendoza",
+      "libroId": "2",
+      "libro": "Introducción a Python",
+      "formato": "Físico",
+      "fecha": "2026-12-02",
+      "horaInicio": "20:12",
+      "horaFin": "20:16",
+      "estado": "En posesión del alumno",
+      "id": 6
+    },
+    {
+      "usuarioId": 9,
+      "codigoUsuario": "U24259243",
+      "nombreUsuario": "Bryan Mendoza",
+      "libroId": "5",
+      "libro": "Libro Académico Especializado N° 5",
+      "formato": "Físico",
+      "fecha": "2026-12-02",
+      "horaInicio": "20:12",
+      "horaFin": "20:16",
+      "estado": "En posesión del alumno",
+      "id": 7
+    }
+  ]
+}

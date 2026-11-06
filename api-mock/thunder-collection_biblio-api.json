@@ -1,0 +1,96 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "BiblioUTP API - Avance 1",
+    "collectionId": "biblio-avance-1",
+    "dateExported": "2026-11-04",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "req_1",
+            "colId": "biblio-avance-1",
+            "name": "1. GET Listar Libros (con filtro sede)",
+            "url": "http://localhost:3000/libros?sede=Lima Centro",
+            "method": "GET"
+        },
+        {
+            "_id": "req_2",
+            "colId": "biblio-avance-1",
+            "name": "2. GET Detalle de Libro por ID",
+            "url": "http://localhost:3000/libros/1",
+            "method": "GET"
+        },
+        {
+            "_id": "req_3",
+            "colId": "biblio-avance-1",
+            "name": "3. POST Crear Libro",
+            "url": "http://localhost:3000/libros",
+            "method": "POST",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Pruebas Unitarias en Aplicaciones JavaScript\",\n  \"sede\": \"Lima Centro\",\n  \"capacidad\": 10,\n  \"formatos\": [\"Físico\", \"E-book\"],\n  \"estado\": \"disponible\"\n}"
+            }
+        },
+        {
+            "_id": "req_4",
+            "colId": "biblio-avance-1",
+            "name": "4. PUT Actualizar Libro",
+            "url": "http://localhost:3000/libros/1",
+            "method": "PUT",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"JavaScript: La Guía Definitiva (7ma Edición)\",\n  \"sede\": \"Lima Centro\",\n  \"capacidad\": 20,\n  \"formatos\": [\"Físico\", \"E-book\", \"Audiolibro\"],\n  \"estado\": \"disponible\"\n}"
+            }
+        },
+        {
+            "_id": "req_5",
+            "colId": "biblio-avance-1",
+            "name": "5. DELETE Eliminar Libro",
+            "url": "http://localhost:3000/libros/8",
+            "method": "DELETE"
+        },
+        {
+            "_id": "req_6",
+            "colId": "biblio-avance-1",
+            "name": "6. GET Prestamos de un Usuario",
+            "url": "http://localhost:3000/prestamos?usuarioId=3",
+            "method": "GET"
+        },
+        {
+            "_id": "req_7",
+            "colId": "biblio-avance-1",
+            "name": "7. POST Crear Prestamo",
+            "url": "http://localhost:3000/prestamos",
+            "method": "POST",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"codigo\": \"PRE-0021\",\n  \"libroId\": 1,\n  \"usuarioId\": 3,\n  \"fecha\": \"2026-11-26\",\n  \"horaInicio\": \"09:00\",\n  \"horaFin\": \"11:00\",\n  \"motivo\": \"Revisión de proyectos de grado\",\n  \"estado\": \"pendiente\",\n  \"creadoEn\": \"2026-11-20T10:00:00Z\"\n}"
+            }
+        },
+        {
+            "_id": "req_8",
+            "colId": "biblio-avance-1",
+            "name": "8. DELETE Cancelar Prestamo",
+            "url": "http://localhost:3000/prestamos/20",
+            "method": "DELETE"
+        }
+    ]
+}

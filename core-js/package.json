@@ -1,0 +1,9 @@
+{
+    "name": "core-js",
+    "version": "1.0.0",
+    "description": "Núcleo de lógica pura, modelos y validaciones para BiblioUTP",
+    "type": "module",
+    "scripts": {
+        "test": "node --test"
+    }
+}

@@ -1,0 +1,87 @@
+<section class="form-card" aria-labelledby="form-title">
+  <header class="form-header">
+    <div>
+      <p class="eyebrow">CATÁLOGO</p>
+      <h2 id="form-title">
+        {{ esEdicion ? 'Editar libro' : 'Registrar libro' }}
+      </h2>
+      <p class="description">Completa la información del libro y su disponibilidad.</p>
+    </div>
+    <span class="required-note">* Campos obligatorios</span>
+  </header>
+
+  <form [formGroup]="formulario" (ngSubmit)="guardar()" novalidate>
+    <div class="field">
+      <label for="nombre">Nombre del libro <span aria-hidden="true">*</span></label>
+      <input id="nombre" type="text" formControlName="nombre" placeholder="Ej. JavaScript: La Guía Definitiva" />
+      @if (formulario.controls.nombre.touched && formulario.controls.nombre.hasError('required')) {
+      <small class="field-error">Escribe el nombre del libro.</small>
+      } @else if (
+      formulario.controls.nombre.touched && formulario.controls.nombre.hasError('maxlength')
+      ) {
+      <small class="field-error">El nombre no debe superar 120 caracteres.</small>
+      }
+    </div>
+
+    <div class="field">
+      <label for="sede">Sede <span aria-hidden="true">*</span></label>
+      <input id="sede" type="text" formControlName="sede" placeholder="Ej. Lima Centro" />
+      @if (formulario.controls.sede.touched && formulario.controls.sede.hasError('required')) {
+      <small class="field-error">Escribe la sede del libro.</small>
+      } @else if (formulario.controls.sede.touched && formulario.controls.sede.hasError('sedeInvalida')) {
+      <small class="field-error">La sede solo debe contener letras y espacios (ej. Lima Centro).</small>
+      }
+    </div>
+
+    <div class="field">
+      <label for="capacidad">Cantidad de ejemplares <span aria-hidden="true">*</span></label>
+      <input id="capacidad" type="number" min="1" max="60" formControlName="capacidad" />
+      <small class="hint">Ingresa un número entre 1 y 60.</small>
+      @if (
+      formulario.controls.capacidad.touched && formulario.controls.capacidad.hasError('required')
+      ) {
+      <small class="field-error">Ingresa la cantidad de ejemplares.</small>
+      } @else if (
+      formulario.controls.capacidad.touched && formulario.controls.capacidad.hasError('entero')
+      ) {
+      <small class="field-error">La cantidad debe ser un número entero.</small>
+      } @else if (formulario.controls.capacidad.touched && formulario.controls.capacidad.invalid) {
+      <small class="field-error">Ingresa un número entre 1 y 60.</small>
+      }
+    </div>
+
+    <fieldset class="field formats-field">
+      <legend>Formatos disponibles <span aria-hidden="true">*</span></legend>
+      <div class="format-options">
+        @for (formato of formatosDisponibles; track formato) {
+        <label class="check-option">
+          <input type="checkbox" [checked]="tieneFormato(formato)"
+            (change)="alternarFormato(formato, $any($event.target).checked)" />
+          <span>{{ formato }}</span>
+        </label>
+        }
+      </div>
+      @if (formatos.touched && formatos.hasError('required')) {
+      <small class="field-error">Selecciona por lo menos un formato.</small>
+      }
+    </fieldset>
+
+    <div class="field">
+      <label for="estado">Estado <span aria-hidden="true">*</span></label>
+      <select id="estado" formControlName="estado">
+        @for (estado of estados; track estado) {
+        <option [value]="estado">{{ estado | titlecase }}</option>
+        }
+      </select>
+    </div>
+    @if (error) {
+      <p class="field-error" role="alert">{{ error }}</p>
+    }
+    <footer class="form-actions">
+      <button class="button-secondary" type="button" (click)="limpiar()">Limpiar</button>
+      <button class="button-primary" type="submit">
+        {{ esEdicion ? 'Guardar cambios' : 'Guardar libro' }}
+      </button>
+    </footer>
+  </form>
+</section>
